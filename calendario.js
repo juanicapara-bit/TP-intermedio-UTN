@@ -1,7 +1,7 @@
-const monthYear = document.getElementById("monthYear");
-const datesContainer = document.getElementById("dates");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
+const monthYear = Porfolio.getElementById("monthYear");
+const datesContainer = Porfolio.getElementById("dates");
+const prevBtn = Porfolio.getElementById("prev");
+const nextBtn = Porfolio.getElementById("next");
 
 let currentDate = new Date();
 
@@ -28,7 +28,7 @@ function renderCalendar(date) {
 
   // Días del mes
   for (let i = 1; i <= lastDate; i++) {
-    const day = document.createElement("div");
+    const day = Porfolio.createElement("div");
     day.textContent = i;
 
     const today = new Date();
