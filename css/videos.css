@@ -1,0 +1,24 @@
+.video-polo {
+
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+
+}
+
+.video-polo video {
+    width: 100%;
+    max-width: 280px;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.video-polo video:hover {
+    outline: 3px solid rgb(33, 32, 32);
+    transform: scale(1.2);
+    transition: transform 0.4s ease-in-out;
+}

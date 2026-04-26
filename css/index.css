@@ -1,0 +1,127 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+}
+
+body {
+        background-color: #777777;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+header {
+        background-color: #333333;
+        padding: 1rem 1rem;
+
+}
+
+header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+
+h1 {
+        text-align: center;
+}
+
+
+.logo {
+        width: 70px;
+}
+
+header nav ul {
+        display: flex;
+        gap: 1.3rem;
+}
+
+header nav ul li, footer ul li {
+        list-style: none;
+}
+
+header nav ul li a, footer a {
+        text-decoration: none;
+        font-size: 1, 2rem;
+        color: rgb(168, 166, 166);
+}
+
+.carousel {
+        padding: 0 5rem;
+}
+
+.carousel-caption {
+        background-color: rgba(0.1, 0.1, 0.1, 0.5);
+}
+
+.carousel-item img {
+        max-width: 1090px;
+        margin: auto;
+}
+
+.carousel button {
+        background-color: #333333;
+        height: 40px;
+        width: auto;
+        margin: auto;
+        transition: transform 1s ease-in-out;
+}
+
+.reason-section {
+        max-width: 900px;
+        margin: 3rem auto;
+        text-align: center;
+        color: rgb(224, 229, 233);
+}
+
+.reason-container {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+        justify-content: center;
+}
+
+.reason-card {
+
+        background-color: #4f4f4f;
+        padding: 2rem;
+        border-radius: 9px;
+        flex: 1;
+        min-width: 300px;
+        box-shadow: 4px 5px 6px 3px rgb(57, 57, 53);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        
+}
+
+.reason-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  }
+
+footer {
+        background-color: #333333;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 1rem;
+        margin-top: auto;
+}
+
+.footer-navegation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1.5rem;
+}
+
+.resaltado {
+        color: rgb(148, 146, 146);
+}
