@@ -1,7 +1,7 @@
-const monthYear = Porfolio.getElementById("monthYear");
-const datesContainer = Porfolio.getElementById("dates");
-const prevBtn = Porfolio.getElementById("prev");
-const nextBtn = Porfolio.getElementById("next");
+const monthYear = document.getElementById("monthYear");
+const datesContainer = document.getElementById("dates");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
 let currentDate = new Date();
 
