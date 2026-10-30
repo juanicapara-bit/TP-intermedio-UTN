@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Creamos un objeto ordenado con los datos
       const datosFormulario = {
-        nombre: inputs[0].value,    // Nombre
-        apellido: inputs[1].value,  // Apellido
-        email: inputs[2].value,     // Email
-        telefono: inputs[3].value,  // Teléfono
+        Nombre: inputs[0].value,    // Nombre
+        Apellido: inputs[1].value,  // Apellido
+        Email: inputs[2].value,     // Email
+        Telefono: inputs[3].value,  // Teléfono
         razon: inputs[4].value,     // Razón de contacto (select)
         comentario: inputs[5].value // Comentario (textarea)
       }
