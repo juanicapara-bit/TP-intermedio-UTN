@@ -1,5 +1,5 @@
 // 1. Importas Supabase arriba del todo
-import { supabase } from '../supabase.js'
+import { supabase } from './supabase.js'
 
 // 2. Función para guardar en la base de datos
 async function guardarMensaje(formData) {
