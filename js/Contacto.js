@@ -4,7 +4,7 @@ import { supabase } from './supabase.js'
 // 2. Función para guardar en la base de datos
 async function guardarMensaje(formData) {
   const { data, error } = await supabase
-    .from('contacto') // Asegúrate de que tu tabla en Supabase se llame así
+    .from('Contacto') // Asegúrate de que tu tabla en Supabase se llame así
     .insert([formData])
 
   if (error) {
