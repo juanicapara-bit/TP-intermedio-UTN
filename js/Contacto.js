@@ -1,10 +1,8 @@
-// 1. Importas Supabase arriba del todo
 import { supabase } from './supabase.js'
 
-// 2. Función para guardar en la base de datos
 async function guardarMensaje(formData) {
   const { data, error } = await supabase
-    .from('Contacto') // Asegúrate de que tu tabla en Supabase se llame así
+    .from('Contacto')
     .insert([formData])
 
   if (error) {
@@ -16,29 +14,26 @@ async function guardarMensaje(formData) {
   }
 }
 
-// 3. Escuchamos cuando se envíe el formulario en el HTML
 document.addEventListener('DOMContentLoaded', () => {
   const formulario = document.querySelector('form')
 
   if (formulario) {
     formulario.addEventListener('submit', async (e) => {
-      e.preventDefault() // Evita que la página se recargue
+      e.preventDefault()
 
-      // Recolectamos los valores de los inputs según su posición o atributos
       const inputs = formulario.querySelectorAll('input, select, textarea')
       
-      // Creamos un objeto ordenado con los datos
       const datosFormulario = {
-        Nombre: inputs[0].value,    // Nombre
-        Apellido: inputs[1].value,  // Apellido
-        Email: inputs[2].value,     // Email
-        Telefono: inputs[3].value,  // Teléfono
-        Razon: inputs[4].value,     // razon (select)
-        Comentario: inputs[5].value // Comentario (textarea)
+        nombre: inputs[0].value,
+        apellido: inputs[1].value,
+        email: inputs[2].value,
+        telefono: inputs[3].value,
+        razon: inputs[4].value,
+        comentario: inputs[5].value
       }
 
       await guardarMensaje(datosFormulario)
-      formulario.reset() // Limpia el formulario tras enviar
+      formulario.reset()
     })
   }
 })
