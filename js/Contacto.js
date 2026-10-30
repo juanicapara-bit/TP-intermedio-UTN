@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const inputs = formulario.querySelectorAll('input, select, textarea')
       
       const datosFormulario = {
-        nombre: inputs[0].value,
-        apellido: inputs[1].value,
-        email: inputs[2].value,
-        telefono: inputs[3].value,
-        razon: inputs[4].value,
-        comentario: inputs[5].value
+        Nombre: inputs[0].value,
+        Apellido: inputs[1].value, // Con 'A' mayúscula
+        Email: inputs[2].value,    // Con 'E' mayúscula
+        Telefono: inputs[3].value, // Con 'T' mayúscula
+        Razon: inputs[4].value,    // Con 'R' mayúscula
+        Comentario: inputs[5].value // Con 'C' mayúscula
       }
 
       await guardarMensaje(datosFormulario)
