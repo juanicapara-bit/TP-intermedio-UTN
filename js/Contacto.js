@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Apellido: inputs[1].value,  // Apellido
         Email: inputs[2].value,     // Email
         Telefono: inputs[3].value,  // Teléfono
-        razon: inputs[4].value,     // Razón de contacto (select)
+        Razon: inputs[4].value,     // Razón de contacto (select)
         Comentario: inputs[5].value // Comentario (textarea)
       }
 
