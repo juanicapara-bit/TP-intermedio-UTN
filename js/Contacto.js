@@ -6,8 +6,8 @@ async function guardarMensaje(formData) {
     .insert([formData])
 
   if (error) {
-    console.error('Error al guardar:', error.message)
-    alert('Hubo un error al enviar el mensaje.')
+    console.error('Detalle del error de Supabase:', error)
+    alert('Error al enviar: ' + error.message)
   } else {
     console.log('Mensaje enviado con éxito:', data)
     alert('¡Mensaje enviado con éxito!')
@@ -21,17 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
     formulario.addEventListener('submit', async (e) => {
       e.preventDefault()
 
-      const inputs = formulario.querySelectorAll('input, select, textarea')
-      
       const datosFormulario = {
-        Nombre: inputs[0].value,
-        Apellido: inputs[1].value, // Con 'A' mayúscula
-        Email: inputs[2].value,    // Con 'E' mayúscula
-        Telefono: inputs[3].value, // Con 'T' mayúscula
-        Razon: inputs[4].value,    // Con 'R' mayúscula
-        Comentario: inputs[5].value // Con 'C' mayúscula
+        Nombre: document.getElementById('name').value,
+        Apellido: document.getElementById('lastname').value,
+        Email: document.getElementById('email').value,
+        Telefono: document.getElementById('phone').value,
+        razon: document.getElementById('reason').value, // <-- En minúscula para que coincida con la base de datos
+        Comentario: document.getElementById('comment').value
       }
 
+      console.log('Datos a enviar:', datosFormulario)
       await guardarMensaje(datosFormulario)
       formulario.reset()
     })
