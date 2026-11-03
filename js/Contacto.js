@@ -21,13 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     formulario.addEventListener('submit', async (e) => {
       e.preventDefault()
 
+      // Capturamos usando el atributo 'name' del HTML para que nunca falle
       const datosFormulario = {
-        Nombre: document.getElementById('name').value,
-        Apellido: document.getElementById('lastname').value,
-        Email: document.getElementById('email').value,
-        Telefono: document.getElementById('phone').value,
-        razon: document.getElementById('reason').value, // <-- En minúscula para que coincida con la base de datos
-        Comentario: document.getElementById('comment').value
+        Nombre: formulario.querySelector('[name="nombre"]')?.value || '',
+        Apellido: formulario.querySelector('[name="apellido"]')?.value || '',
+        Email: formulario.querySelector('[name="email"]')?.value || '',
+        Telefono: formulario.querySelector('[name="telefono"]')?.value || '',
+        razon: formulario.querySelector('[name="razon"]')?.value || '',
+        Comentario: formulario.querySelector('[name="comentario"]')?.value || ''
       }
 
       console.log('Datos a enviar:', datosFormulario)
