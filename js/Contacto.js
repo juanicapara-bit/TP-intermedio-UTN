@@ -2,7 +2,7 @@ import { supabase } from './supabase.js'
 
 async function guardarMensaje(formData) {
   const { data, error } = await supabase
-    .from('Contacto')
+    .from('contacto') // <-- En minúscula exacto
     .insert([formData])
 
   if (error) {
@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault()
 
       const datosFormulario = {
-        Nombre: formulario.querySelector('[name="nombre"]')?.value || '',
-        Apellido: formulario.querySelector('[name="apellido"]')?.value || '',
-        Email: formulario.querySelector('[name="email"]')?.value || '',
-        Telefono: formulario.querySelector('[name="telefono"]')?.value || '',
-        Razon: formulario.querySelector('[name="razon"]')?.value || '', // <-- Con 'R' mayúscula
-        Comentario: formulario.querySelector('[name="comentario"]')?.value || ''
+        nombre: formulario.querySelector('[name="nombre"]')?.value || '',
+        apellido: formulario.querySelector('[name="apellido"]')?.value || '',
+        email: formulario.querySelector('[name="email"]')?.value || '',
+        telefono: formulario.querySelector('[name="telefono"]')?.value || '',
+        razon: formulario.querySelector('[name="razon"]')?.value || '',
+        comentario: formulario.querySelector('[name="comentario"]')?.value || ''
       }
 
       console.log('Datos a enviar:', datosFormulario)
