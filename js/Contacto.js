@@ -21,13 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     formulario.addEventListener('submit', async (e) => {
       e.preventDefault()
 
-      // Capturamos usando el atributo 'name' del HTML para que nunca falle
       const datosFormulario = {
         Nombre: formulario.querySelector('[name="nombre"]')?.value || '',
         Apellido: formulario.querySelector('[name="apellido"]')?.value || '',
         Email: formulario.querySelector('[name="email"]')?.value || '',
         Telefono: formulario.querySelector('[name="telefono"]')?.value || '',
-        razon: formulario.querySelector('[name="razon"]')?.value || '',
+        Razon: formulario.querySelector('[name="razon"]')?.value || '', // <-- Con 'R' mayúscula
         Comentario: formulario.querySelector('[name="comentario"]')?.value || ''
       }
 
